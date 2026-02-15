@@ -1,0 +1,191 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: white;      /* ⭐ changed from gray */
+    color: #1A202C;
+}
+
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: white;
+    border-bottom: 1px solid #e0dacc;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo img {
+    height: 85px;
+}
+
+/* NAVIGATION */
+nav a {
+    text-decoration: none;
+    color: #e0dacc;
+    background: #0B1220;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: #e0dacc;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    color: #2B2B2B;
+}
+
+nav a:active {
+    transform: scale(0.97);
+}
+
+/* HERO */
+.hero {
+    height: 680px;
+    display: flex;
+    background: #0B1220; /* Dark tech background */
+}
+
+/* LEFT SIDE → IMAGE */
+.hero-image {
+    flex: 1.4;
+
+    background-image: 
+        linear-gradient(
+            90deg,
+            rgba(11, 18, 32, 0) 55%,
+            rgba(11, 18, 32, 1) 85%
+        ),
+        url("img/background.png");
+
+    background-size: cover;          /* ⭐ critical */
+    background-position: left center;/* ⭐ pushes tooth outward */
+    background-repeat: no-repeat;
+}
+
+
+/* RIGHT SIDE → TEXT */
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25px;   /* ⭐ pushes button lower */
+    padding: 0 80px;
+    color: #e0dacc;
+    transform: translateY(-40px);  /* ⭐ moves content upward */
+    
+}
+
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 19px;
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+
+/* SECTIONS */
+section {
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.light-section {
+    background: #1A202C;
+    color: #e0dacc;
+}
+
+/* SERVICES */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card {
+    background: #0B1220;   /* your dark tech blue */
+    color: #e0dacc;          /* ⭐ THIS is the key fix */
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.08);
+    width: 180px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+}
+
+
+
+/* TEAM */
+.team {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.member {
+    background: #1A202C;
+    color: #e0dacc;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+    width: 220px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.member img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1A202C;
+    color: white;
+}
+
+button {
+    background: transparent;     /* ⭐ removes white box */
+    color: white;                /* ⭐ white text */
+    border: 1px solid white;     /* ⭐ clean tech outline */
+    padding: 12px 28px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.25s ease;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+}
+
