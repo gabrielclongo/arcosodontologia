@@ -448,23 +448,27 @@ footer {
     font-size: 14px;
 }
 
-/* BUTTON PADRÃO PREMIUM */
+/* CONTACT BUTTON (POLIDO) */
 .contact-button {
     display: inline-block;
     margin-top: 25px;
-
     text-decoration: none;
     color: white;
     border: 1px solid rgba(255,255,255,0.6);
     padding: 11px 26px;
     border-radius: 999px;
-
-    transition: 0.25s ease;
+    transition: all 0.18s ease;
 }
 
 .contact-button:hover {
     background: rgba(255,255,255,0.08);
     transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.contact-button:active {
+    transform: translateY(2px) scale(0.96);
+    filter: brightness(0.95);
 }
 
 /* MAP */
