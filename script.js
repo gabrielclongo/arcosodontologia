@@ -1,6 +1,17 @@
-const toggle = document.getElementById("menuToggle");
-const nav = document.getElementById("mainNav");
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
 
-toggle.addEventListener("click", () => {
-    nav.classList.toggle("open");
-});
+if (menuToggle && mainNav) {
+
+    menuToggle.addEventListener("click", () => {
+        mainNav.classList.toggle("active");
+    });
+
+    const navLinks = document.querySelectorAll(".main-nav a");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            mainNav.classList.remove("active");
+        });
+    });
+}
