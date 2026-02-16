@@ -570,3 +570,21 @@ footer {
         padding-left: 18px;
     }
 }
+
+html, body {
+    overflow-x: hidden;
+}
+
+img,
+iframe {
+   max-width: 100%;
+   height: auto;
+   display: block;
+}
+
+@media (max-width: 900px) {
+    section {
+        padding: 70px 20px;
+    }
+}
+
