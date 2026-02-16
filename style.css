@@ -588,3 +588,48 @@ iframe {
     }
 }
 
+@media (max-width: 900px) {
+
+    @media (max-width: 900px) {
+
+    .about-intro,
+    .about-block {
+        text-align: center;
+        padding: 22px 18px;
+    }
+
+}
+
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+
+
+    .about-block ul {
+        text-align: left;        /* ⭐ mantém lista bonita */
+        display: inline-block;   /* ⭐ impede esticar lateral */
+    }
+
+
+    .about-container {
+        max-width: 420px;     /* ⭐ ESSENCIAL */
+        margin: 0 auto;       /* ⭐ centraliza o conjunto */
+    }
+
+}
+
+
+    .about-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-section {
+    overflow-x: hidden;
+}
+
+
