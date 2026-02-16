@@ -204,16 +204,6 @@ section {
 }
 
 
-/* IMAGE FIX CRÍTICO */
-.treatments-image {
-    flex: 1;
-    min-height: 420px;
-
-    background-image: url("img/pic.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
 .treatments-content {
     flex: 1;
@@ -471,6 +461,7 @@ footer {
 }
 
 /* MOBILE */
+/* MOBILE CONTACT */
 @media (max-width: 900px) {
     .contact-container {
         grid-template-columns: 1fr;
@@ -542,55 +533,22 @@ footer {
 /* MOBILE GLOBAL SPACING */
 @media (max-width: 900px) {
     section {
-        padding: 60px 20px;
-    }
-}
-
-/* ABOUT MOBILE FIX (CRÍTICO) */
-@media (max-width: 900px) {
-
-    .about-grid {
-        grid-template-columns: 1fr;   /* empilha os blocos */
-        gap: 20px;
-    }
-
-    .about-block {
-        width: 100%;
-        padding: 22px;
-    }
-
-    .about-block p,
-    .about-block li {
-        font-size: 15px;      /* melhora leitura */
-        line-height: 1.6;
-        word-break: normal;   /* ⭐ impede quebra bizarra */
-    }
-
-    .about-block ul {
-        padding-left: 18px;
-    }
-}
-
-html, body {
-    overflow-x: hidden;
-}
-
-img,
-iframe {
-   max-width: 100%;
-   height: auto;
-   display: block;
-}
-
-@media (max-width: 900px) {
-    section {
         padding: 70px 20px;
     }
 }
 
+/* ABOUT MOBILE FIX (CORRIGIDO) */
 @media (max-width: 900px) {
 
-    @media (max-width: 900px) {
+    .about-container {
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
 
     .about-intro,
     .about-block {
@@ -598,38 +556,76 @@ iframe {
         padding: 22px 18px;
     }
 
-}
-
-
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 22px;
-    }
-
-
-
     .about-block ul {
-        text-align: left;        /* ⭐ mantém lista bonita */
-        display: inline-block;   /* ⭐ impede esticar lateral */
+        text-align: left;
+        display: inline-block;
     }
 
-
-    .about-container {
-        max-width: 420px;     /* ⭐ ESSENCIAL */
-        margin: 0 auto;       /* ⭐ centraliza o conjunto */
+    .about-block p,
+    .about-block li {
+        font-size: 15px;
+        line-height: 1.6;
+        word-break: normal;
     }
-
 }
 
-
-    .about-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.about-section {
+/* GLOBAL SAFETY */
+html, body {
     overflow-x: hidden;
 }
 
+img, iframe {
+   max-width: 100%;
+   height: auto;
+   display: block;
+}
 
+/* BOTÃO HAMBURGER */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    margin-left: auto;   /* ⭐ EMPURRA PARA DIREITA */
+}
+
+
+/* MOBILE MENU */
+@media (max-width: 900px) {
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        background: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .main-nav a {
+        background: #0B1220;
+        color: white;
+        width: 90%;
+        justify-content: center;
+        margin: 6px 0;
+    }
+
+    .main-nav.open {
+        max-height: 300px; /* altura da animação */
+    }
+
+    .site-header {
+        position: sticky;
+    }
+}
