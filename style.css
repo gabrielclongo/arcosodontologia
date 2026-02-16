@@ -53,10 +53,12 @@ p {
 }
 
 .main-nav a:hover {
-    background: #e0dacc;
-    color: #0B1220;
     transform: translateY(-2px);
     box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+
+    /* mantém mesma cor */
+    background: #0B1220;
+    color: white;
 }
 
 .main-nav a:active {
@@ -126,18 +128,18 @@ p {
     transition: all 0.25s ease;
 }
 
-.hero-button,
-nav a,
+a,
 button {
     transition: all 0.18s ease;
 }
 
-.hero-button:active,
-nav a:active,
+a:active,
 button:active {
     transform: translateY(2px) scale(0.96);
     filter: brightness(0.95);
 }
+
+
 
 
 .hero-button:hover {
@@ -357,7 +359,21 @@ section {
     border: 1px solid rgba(255,255,255,0.6);
     padding: 10px 22px;
     border-radius: 999px;
+
+    transition: all 0.18s ease;   /* ⭐ importante */
 }
+
+.about-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    background: rgba(255,255,255,0.08); /* opcional */
+}
+
+.about-button:active {
+    transform: translateY(2px) scale(0.96);
+    filter: brightness(0.95);
+}
+
 
 /* CONTACT BUTTON */
 .contact-button {
