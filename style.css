@@ -284,7 +284,13 @@ section {
         grid-template-columns: 1fr;
         max-width: 100%;
     }
+
+    .treatments-content {
+        padding: 0;
+        text-align: center;
+    }
 }
+
 
 /* TEAM */
 .team {
@@ -475,3 +481,92 @@ footer {
     }
 }
 
+/* MOBILE HEADER FIX */
+@media (max-width: 900px) {
+
+    .site-header {
+        flex-direction: column;
+        padding: 18px 20px;
+        gap: 12px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .main-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .main-nav a {
+        margin: 0;
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+}
+
+/* MOBILE HERO FIX */
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .hero-image {
+        flex: none;
+        height: 220px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero-content {
+        padding: 40px 20px;
+        transform: none;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 15px;
+        max-width: 100%;
+    }
+}
+
+/* MOBILE GLOBAL SPACING */
+@media (max-width: 900px) {
+    section {
+        padding: 60px 20px;
+    }
+}
+
+/* ABOUT MOBILE FIX (CRÍTICO) */
+@media (max-width: 900px) {
+
+    .about-grid {
+        grid-template-columns: 1fr;   /* empilha os blocos */
+        gap: 20px;
+    }
+
+    .about-block {
+        width: 100%;
+        padding: 22px;
+    }
+
+    .about-block p,
+    .about-block li {
+        font-size: 15px;      /* melhora leitura */
+        line-height: 1.6;
+        word-break: normal;   /* ⭐ impede quebra bizarra */
+    }
+
+    .about-block ul {
+        padding-left: 18px;
+    }
+}
